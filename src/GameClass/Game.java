@@ -475,28 +475,18 @@ public class Game extends JFrame implements MouseListener, KeyListener{
 				for (int g = 0; g < 11; g++){
 					if (mY > (h * 50) + 10 && mY < (h * 50) + 50 && mX > (g * 50) + 10 && mX < (g * 50) + 50) {
 						
-						System.out.println("click at box " + h + ", " + g);
-						
 						if (Inventory.drag == false && Inventory.invarray[h][g] > 0){
-							
 							Inventory.drag = true;
 							Inventory.dragType = Inventory.invarray[h][g];
 							Inventory.dragNo = Inventory.invarrayno[h][g];
 							Inventory.invarray[h][g] = 0;
 							Inventory.invarrayno[h][g] = 0;
-							
-							System.out.println("drag" + Inventory.drag);
-							System.out.println("dragType" + Inventory.dragType);
-							System.out.println("dragNo" + Inventory.dragNo);
 						} else if (Inventory.drag == true && Inventory.invarray[h][g] == 0){
 							Inventory.drag = false;
 							Inventory.invarray[h][g] = Inventory.dragType;
 							Inventory.invarrayno[h][g] = Inventory.dragNo;
 							Inventory.dragType = 0;
 							Inventory.dragNo = 0;
-							System.out.println("drag" + Inventory.drag);
-							System.out.println("dragType" + Inventory.dragType);
-							System.out.println("dragNo" + Inventory.dragNo);
 						}
 						
 						break loop;
@@ -557,10 +547,10 @@ public class Game extends JFrame implements MouseListener, KeyListener{
 			
 		}
 	}
-    
+	
 	@Override
-    public void mouseEntered(MouseEvent me) {}
-    
+	public void mouseEntered(MouseEvent me) {}
+	
 	@Override
-    public void mouseExited(MouseEvent me) {}
+	public void mouseExited(MouseEvent me) {}
 }

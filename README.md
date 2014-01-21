@@ -1,4 +1,4 @@
-Planet_Colony
+Planet Colony
 =============
 
 Space, a game about.
